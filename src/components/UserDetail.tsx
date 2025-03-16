@@ -149,7 +149,7 @@ const UserDetail: React.FC<UserDetailProps> = ({
        <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
       </div>
      ) : repositories && repositories.length > 0 ? (
-      <div className="space-y-4 max-h-screen w-full overflow-y-auto">
+      <div className=" h-screen overflow-y-scroll overflow-x-hidden">
        {repositories.map((repo, index) => (
         <RepositoryCard key={repo.id} repository={repo} index={index} />
        ))}
